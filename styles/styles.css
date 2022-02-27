@@ -152,18 +152,18 @@ td.ticker.boundary{
     position:absolute;
 }
 
-@keyframes ticker{
-    0%{left:-265px;}
-    85%{left:50px;}
-    100%{left:0;}
-}
-
 tr.dropdown td a.ticker{
     display:none;
 }
 
+@keyframes ticker{
+    0%{left:-265px;}
+    90%{left:40px;}
+    100%{left:0;}
+}
+
 tr.dropdown:hover td a.ticker{
-    animation: ticker 2s ease-in-out 1;
+    animation: ticker 1.7s ease-in-out 1;
     position:absolute;
     font-size:85%;
     white-space:nowrap;
