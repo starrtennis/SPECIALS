@@ -9,5 +9,6 @@ var getHTML = async function (file) {
     let result = await response.then(res => res.text()).then(HTML => {return HTML});
     return result;
     */
-    return fetch(file).then(response => response.text());
+    var result = await fetch(file, {method:'POST'}).then(response => response.text());
+    return result;
   };

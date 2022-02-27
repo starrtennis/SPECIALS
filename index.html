@@ -50,9 +50,7 @@
         <script type="text/javascript">
             var myClasses = document.getElementsByClassName("centerText");
             console.log(myClasses);
-            for (var i = 0; i < myClasses.length; i++) {
-                myClasses[i].innerHTML = getHTML("snippets/Contact.html");
-            }
+            myClasses[0].innerHTML = getHTML("snippets/Contact.html").then((result) => {document.getElementsByClassName("CenterText").innerHTML = result});
         </script>
     </body>
 </html>
