@@ -57,120 +57,117 @@ div.horizontalBar{
 
 
 /* menu stuff */
-ul{
-    list-style-type: none;
+table.main{
+    margin:10px;
+    border-collapse: collapse;
+}
+
+tr{
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 120%;
 }
 
-ul.dropdown{
+tr.dropdown{
     margin-bottom:10px;
 }
 
-ul.dropdown lh{
+tr.dropdown th{
     border: 1px dotted rgb(10,18,50);
-    border-radius:6px;
+    border-radius:5px;
 }
 
 a{
     text-decoration: none;
 }
 
-ul.dropdown lh a{
+tr.dropdown th a{
     padding:4px;
     color: white;
 }
 
-ul.dropdown lh a:visited{
+tr.dropdown th a:visited{
     color:rgb(159,219,247);
 }
 
-ul.dropdown lh a:focus{
+tr.dropdown th a:focus{
     color:rgb(10,18,50);
 }
 
-ul.dropdown:hover lh{
+tr.dropdown:hover th{
     background-color: white;
+    color: rgb(10,18,50);
 }
 
-ul.dropdown:hover lh a{
+tr.dropdown:hover th a{
     color:rgb(10,18,50);
 }
 
-ul.dropdown lh a:active{
-    color:rgb(10,18,50);
+tr.dropdown th a:active{
+    color:rgb(224,20,77);
     font-weight:bolder;
 }
 
-ul.dropdown li{
+tr.dropdown td{
     display: none;
 }
 
-ul.dropdown:hover li{
-    display: inline;
-}
+tr.dropdown:hover td{
+    display: table-cell;
+}   
 
-ul.dropdown li a{
+tr.dropdown td a{
     color:rgb(10,18,50);
 }
 
-ul.dropdown li a:visited{
+tr.dropdown td a:visited{
     color:rgb(159,219,247);
 }
 
-ul.dropdown li a:focus{
+tr.dropdown td a:focus{
     color:rgb(98,97,164);
     font-weight: bolder;
 }
 
-ul.dropdown li a:hover{
+tr.dropdown td a:hover{
     color:rgb(10,18,50);
 }
 
-ul.dropdown li a:active{
+tr.dropdown td a:active{
     color:rgb(98,97,164);
     font-weight: normal;
 }
 
-ul.main{
-    position:absolute;
-    top:10px;
-    left:10px;
-}
-
-ul.main li{
-    margin-bottom: 5px;
-}
-
 /* email ticker */
-ul.Contact{
+tr.Contact{
     position:relative;
 }
 
-ul.Contact lh{
-    
-}
-
-div.ticker.boundary{
+td.ticker.boundary{
     width:300px;
-    height:25px;
-    display:inline-block;
+    height:24px;
+    display:table-cell;
     overflow:hidden;
-    border: 1px dotted black;
+    position:absolute;
 }
 
 @keyframes ticker{
-    0%{left:-330px;}
+    0%{left:-265px;}
+    85%{left:50px;}
     100%{left:0;}
 }
 
-a.ticker{
-    animation: ticker 4s linear 1;
+tr.dropdown td a.ticker{
+    display:none;
+}
+
+tr.dropdown:hover td a.ticker{
+    animation: ticker 2s ease-in-out 1;
     position:absolute;
     font-size:85%;
     white-space:nowrap;
+    display:table-cell;
 }
 
 /* content area */
