@@ -5,52 +5,57 @@
         <title>Diagonal Banner Landing Page</title>
     </head>
     <body>
-        <div class="verticalBar"></div>
+        <div class="verticalBarContainer">
+            <div class="verticalBar"></div>
+        </div>
+        
         <div class="horizontalBar"></div>
+        
         <a href="#"><img class="banner" src="images/genericWebBanner2.png" width="600px" alt="www.imagineadv-webbanners.com > Generic Web Banner, Shop Now IN-STOCK Specials, purple" /></a>
 
         <table class="main">
-            <tr class="Catalog dropdown">
+            <tr class="dropdown" id="Catalog">
                 <th><a href="#">Catalog</a></label></th>
                 <td class="separator">></td>
                 <td class="item"><a href="#">1</a></td>
                 <td class="item"><a href="#">2</a></td>
                 <td class="item"><a href="#">3</a></td>
             </tr>
-            <tr class="Orders dropdown">
+            <tr class="dropdown" id="Orders">
                 <th><a href="#">Orders</a></th>
                 <td class="separator">></td>
                 <td class="item"><a href="#">1</a></td>
                 <td class="item"><a href="#">2</a></td>
                 <td class="item"><a href="#">3</a></td>
             </tr>
-            <tr class="Purchase dropdown">
+            <tr class="dropdown" id="Purchase">
                 <th><a href="#">Purchase</a></th>
                 <td class="separator">></td>
                 <td class="item"><a href="#">1</a></td>
                 <td class="item"><a href="#">2</a></td>
                 <td class="item"><a href="#">3</a></td>
             </tr>
-            <tr class="Reviews dropdown">
+            <tr class="dropdown" id="Reviews">
                 <th><a href="#">Reviews</a></th>
                 <td class="separator">></td>
                 <td class="item"><a href="#">1</a></td>
                 <td class="item"><a href="#">2</a></td>
                 <td class="item"><a href="#">3</a></td>
             </tr>
-            <tr class="Contact dropdown">
+            <tr class="dropdown" id="Contact">
                 <th><a href="#">Contact</a></th>
                 <td class="separator">></td>
                 <td colspan="3" class="item ticker boundary"><a href="mailto:starrtennis@gmail.com" class="ticker">starrtennis [at] gmail [dot] com</a></td>
             </tr>
         </table>
 
-        <span class="centerText">{{page content}}</span>
-        <script type="text/javascript" src="scripts/script.js"></script>
+        <div id="centerText"></div>
+
+        <script type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="scripts/fetch.js"></script>
         <script type="text/javascript">
-            var myClasses = document.getElementsByClassName("centerText");
-            console.log(myClasses);
-            myClasses[0].innerHTML = getHTML("snippets/Contact.html").then((result) => {document.getElementsByClassName("CenterText").innerHTML = result});
+            declareFetchVariables("snippets/", "centerText", "page content");
         </script>
+        <script type="text/javascript" src="scripts/clicks.js"></script>
     </body>
 </html>

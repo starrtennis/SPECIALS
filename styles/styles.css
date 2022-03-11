@@ -17,10 +17,12 @@ body{
 /* banner stuff */
 img.banner{
     position:fixed;
-    bottom:180px;
+    bottom:17%;
     right:-7px;
     transform: rotate(-45deg);
     border-radius:50px;
+    z-index:0;
+    width:30%;
 }
 
 @keyframes bannerJiggle{
@@ -45,6 +47,17 @@ div.verticalBar{
     right:50px;
     height:100%;
     width:100px;
+    z-index:-1;
+}
+
+div.verticalBarContainer{
+    position:static;
+    float:right;
+    width: 150px;
+    height:100%;
+    border:1px solid white;
+    color:white;
+    margin-left:20px;
 }
 
 div.horizontalBar{
@@ -53,13 +66,19 @@ div.horizontalBar{
     bottom:50px;
     width:100%;
     height:100px;
+    z-index:-1;
+    box-sizing: border-box;
 }
 
 
 /* menu stuff */
 table.main{
-    margin:10px;
-    border-collapse: collapse;
+    position:relative;
+    top:10px;
+    left:10px;
+    border-spacing: 0px 0.5rem;
+    z-index:1;
+    border:1px solid black;
 }
 
 tr{
@@ -69,22 +88,22 @@ tr{
     font-size: 120%;
 }
 
-tr.dropdown{
-    margin-bottom:10px;
+a{
+    text-decoration: none;
 }
 
 tr.dropdown th{
-    border: 1px dotted rgb(10,18,50);
+    background-color: rgb(224,20,77);
     border-radius:5px;
-}
-
-a{
-    text-decoration: none;
+    padding:0;
 }
 
 tr.dropdown th a{
     padding:4px;
     color: white;
+    border: 1px dotted rgb(10,18,50);
+    border-radius:5px;
+    display:block;
 }
 
 tr.dropdown th a:visited{
@@ -95,13 +114,9 @@ tr.dropdown th a:focus{
     color:rgb(10,18,50);
 }
 
-tr.dropdown:hover th{
+tr.dropdown:hover th a{
     background-color: white;
     color: rgb(10,18,50);
-}
-
-tr.dropdown:hover th a{
-    color:rgb(10,18,50);
 }
 
 tr.dropdown th a:active{
@@ -147,13 +162,9 @@ tr.Contact{
 td.ticker.boundary{
     width:300px;
     height:24px;
-    display:table-cell;
-    overflow:hidden;
-    position:absolute;
-}
-
-tr.dropdown td a.ticker{
     display:none;
+    overflow:hidden;
+    position:relative;
 }
 
 @keyframes ticker{
@@ -167,14 +178,19 @@ tr.dropdown:hover td a.ticker{
     position:absolute;
     font-size:85%;
     white-space:nowrap;
-    display:table-cell;
+    display:block;
+    bottom:9px;
 }
 
 /* content area */
-span.centerText{
+#centerText{
     font-family: 'Alegreya SC', serif;
+    /*
     position:absolute;
     left:20%;
-    top:35%;
+    top:25%;
+    width:60%;
+    */
     font-size:200%;
+    margin:50px;
 }
