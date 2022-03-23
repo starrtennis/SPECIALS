@@ -83,6 +83,8 @@ table.main{
     left:10px;
     border-spacing: 0px 0.5rem;
     z-index:1;
+    border:1px solid black;
+    display:inline;
 }
 
 tr{
@@ -116,6 +118,7 @@ tr.dropdown th a:visited{
 
 tr.dropdown th a:focus{
     color:rgb(10,18,50);
+    border-color:white;
 }
 
 tr.dropdown:hover th a{
@@ -134,7 +137,7 @@ tr.dropdown td{
 
 tr.dropdown:hover td{
     display: table-cell;
-}   
+}
 
 tr.dropdown td a{
     color:rgb(10,18,50);
@@ -185,6 +188,23 @@ tr.dropdown:hover td a.ticker{
     display:block;
     bottom:9px;
 }
+
+/* item selection form */
+form.itemselect{
+  position: absolute;
+  top:20px;
+  left: 400px;
+  border:1px solid black;
+  display: inline;
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+form.itemselect input{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+}
+
 
 /* content area */
 #centerText{
