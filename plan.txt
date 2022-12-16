@@ -1,0 +1,12 @@
+SPECIALS:
+add JavaScript
+change size of logo based on x and y, not just x
+add adaptive sizing of webpage (change orientation at certain size)
+make inactive color of menu items brighter (hard to see as of now)
+add content to main pane when clicked on menu
+add items to h-dropdown panes of menu
+change contact email to mike@spinningcow.xyz
+enter item name --> add to either catalog or purchase database
+add Django, thus?
+change logo to dance on click, not on hold
+stylize item name box
