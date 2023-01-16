@@ -51,9 +51,16 @@
             </tr>
         </table>
 
-        <form class="itemselect" action="" method="post">
+        <form class="itemselect" action="javascript/process_itemselect.js" method="post">
           <label for="itemname">Item Name: </label>
-          <input id="itemname" type="text" name="itemname" value="">
+          <input list="items" id="itemname" type="text" name="itemname" value="">
+          <datalist id="items">
+            <option value="cheese" />
+            <option value="bible" />
+            <option value="wedding ring" />
+            <option value="Sennheisers" />
+          </datalist>
+          <input type="submit" name="submit_button" value="Enter">
         </form>
 
         <div id="centerText"></div>

@@ -197,6 +197,7 @@ form.itemselect{
   border:none;
   display: inline;
   color:white;
+  weight:bolder;
   font-family: 'Montserrat', sans-serif;
 }
 
